@@ -11,5 +11,5 @@ phases:
   post_build:
     commands:
       - echo "Updating lambda Function..."
-      - aws lambda update-function-code --function-name dynamicLambda --zip-file fileb://lambda_function.py
+      - aws lambda update-function-code --function-name dynamicLambda --lambda_function.py
       - echo "DONE!!"
