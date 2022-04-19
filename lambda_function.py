@@ -1,4 +1,4 @@
 def lambda_handler(event, context):
-    text='Hello Sirji!!'
+    text='This lamda was changed at 10:11 PM'
     print(text)
     return text
