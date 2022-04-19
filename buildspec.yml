@@ -7,13 +7,9 @@ phases:
       - echo "Installing Zero dependencies..."
   build:
     commands:
-      - echo "Zipping deployment package..."
-      - cd lib
-      - zip -r9 ../deployment_package.zip .
-      - cd ..
-      - zip -g deployment_package.zip lambda_function.py
+      - echo "Zipping zero deployment packages..."
   post_build:
     commands:
       - echo "Updating lambda Function..."
-      - aws lambda update-function-code --function-name dynamicLambda --zip-file fileb://deployment_package.zip
+      - aws lambda update-function-code --function-name dynamicLambda --zip-file fileb://lambda_function.py
       - echo "DONE!!"
