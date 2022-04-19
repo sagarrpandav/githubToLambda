@@ -1,2 +1,4 @@
 def lambda_handler(event, context):
-    print('I Changed at 9:58 PM!!')
+    text='Hello Sirji!!'
+    print(text)
+    return text
